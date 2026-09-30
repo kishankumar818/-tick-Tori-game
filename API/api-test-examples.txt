@@ -1,0 +1,6 @@
+# Replace YOUR_DOMAIN and VIDEO_ID
+
+GET https://YOUR_DOMAIN.vercel.app/api/download?url=https://www.youtube.com/watch?v=VIDEO_ID&quality=1080
+GET https://YOUR_DOMAIN.vercel.app/api/download?url=https://www.youtube.com/watch?v=VIDEO_ID&quality=720
+GET https://YOUR_DOMAIN.vercel.app/api/download?url=https://www.youtube.com/watch?v=VIDEO_ID&quality=480
+GET https://YOUR_DOMAIN.vercel.app/api/download?url=https://www.youtube.com/watch?v=VIDEO_ID&quality=mp3

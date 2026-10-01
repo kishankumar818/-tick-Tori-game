@@ -1,13 +1,3 @@
 {
-  "version": 2,
-  "rewrites": [
-    {
-      "source": "/public/index.html",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/public",
-      "destination": "/index.html"
-    }
-  ]
+  "version": 2
 }

@@ -167,9 +167,20 @@ module.exports = async (req, res) => {
 
   } catch (err) {
     console.error(err);
+    const details = err && err.message ? err.message : "Unknown error";
+    const needsVerification = /sign in to confirm|not a bot|confirm you.?re not a bot|bot/i.test(details);
+
+    if (needsVerification) {
+      return res.status(503).json({
+        error: "YouTube is requiring bot verification for this video.",
+        details: "The download service cannot complete YouTube sign-in challenges from a serverless API. Try another public video later, or use the official YouTube download options.",
+        code: "YOUTUBE_BOT_VERIFICATION"
+      });
+    }
+
     return res.status(500).json({
       error: "Unable to process this YouTube URL.",
-      details: err && err.message ? err.message : "Unknown error"
+      details
     });
   }
 };

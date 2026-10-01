@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>YouTube Downloader API</title>
+    <style>
+      :root { color-scheme: light; font-family: Arial, sans-serif; }
+      body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #f4f7fb; color: #172033; }
+      main { width: min(680px, calc(100% - 32px)); padding: 40px; background: white; border: 1px solid #dce3ee; border-radius: 16px; box-shadow: 0 12px 36px rgba(23, 32, 51, .08); }
+      h1 { margin: 0 0 12px; font-size: clamp(1.8rem, 5vw, 2.5rem); }
+      p { line-height: 1.6; color: #526078; }
+      code { display: block; overflow-wrap: anywhere; margin-top: 20px; padding: 16px; border-radius: 10px; background: #f0f3f8; color: #24324a; }
+      a { color: #1457d9; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>YouTube Downloader API</h1>
+      <p>The deployment is working. Use the API endpoint below with an authorized YouTube URL and a supported quality.</p>
+      <code>/api/download?url=https://www.youtube.com/watch?v=VIDEO_ID&amp;quality=720</code>
+      <p>Supported qualities: 1080, 720, 480, and mp3.</p>
+    </main>
+  </body>
+</html>
